@@ -33,7 +33,7 @@ export const Topics = (props: {
     return (
         <div className={styles.container}>
             <div className="heading">
-                Available Topics
+                Select a Vorstand AI
             </div>
             <div>
                 {

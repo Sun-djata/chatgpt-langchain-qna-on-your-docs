@@ -65,11 +65,13 @@
 }
 
 .messageColorAI {
-    background: #411706;
+    background-color: rgb(209 213 219);
+    font-size: small;
 }
 
 .messageColorUser {
-    background: #1a0071;
+    background-color: rgb(147 197 253);
+    font-size: small;
 }
 
 .messageAvatarContainer {
@@ -90,7 +92,7 @@
 .userInput {
     flex: 1;
     display: flex;
-    width: 80%;
+    width: 100%;
     color: #000000;
     padding-left: 5px;
 }

@@ -87,13 +87,13 @@ export const Conversation = (props: {
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
-                <div className="heading">
+                <div className="text-3xl font-bold">
                     Conversation History
                 </div>
-                <button onClick={() => setMessages([])}>
+                <button className="btn" onClick={() => setMessages([])}>
                     Clear Chat
                 </button>
-                <button onClick={() => ingestDocuments()} disabled={ingestingDocuments}>
+                <button className="btn" onClick={() => ingestDocuments()} disabled={ingestingDocuments}>
                     {ingestingDocuments ? "Ingesting..." : "Ingest Documents"}
                 </button>
             </div>
@@ -137,20 +137,22 @@ export const Conversation = (props: {
                     })
                 }
             </div>
-            <form
-                className={styles.userInputForm}
-                onSubmit={sendUserMessage}
-            >
-                <input
-                    onChange={(e) => setUserInput(e.target.value)}
-                    value={userInput}
-                    autoComplete="off"
-                    className={styles.userInput}
-                />
-                <button className={styles.submitButton}>
-                    Send!
-                </button>
-            </form>
+            <div className='bg-gray-200 bottom-0  py-10 shadow-lg rounded-lg'>
+                <form
+                    className='containerWrap flex px-3'
+                    onSubmit={sendUserMessage}
+                >
+                    <input
+                        onChange={(e) => setUserInput(e.target.value)}
+                        value={userInput}
+                        autoComplete="off"
+                        className="font-extralight"
+                    />
+                    <button className='w-auto bg-gray-500 text-white rounded-r-lg px-5 text-sm'>
+                        Send!
+                    </button>
+                </form>
+            </div>
         </div>
     )
 }
